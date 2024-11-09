@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border-style: solid;
+    /* border-style: dashed; */
     border-color: black;
     height: 100vh;
     width: 100vw;
@@ -12,29 +12,77 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-style: dashed;
+    border-style: solid;
     border-color: black;
     height: 650px;
     width: 600px;
     margin: 3px;
 }
 
-.content{
+.cont{
     display: flex;
     flex-grow: 1;
-    border-style: solid;
+    /* border-style: dashed; */
     border-color: black;
     margin: 3px;
 }
 
-.content.btns{
+.cont.btnsCont{
     flex-grow: 5;
 }
 
-.content.display{
+.cont.displayCont{
     flex-grow: 1;
 }
 
-.content.clear{
+.cont.clearCont{
+    flex-grow: 0.5;
+}
+
+.content{
+    display: flex;
+    border-style: solid;
+    border-color: black;
     flex-grow: 1;
+    margin: 3px;
+    justify-content: center;
+}
+
+.btnsBorder{
+    flex-direction: column;
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+    border-style: dashed;
+    border-color: black;
+    margin: 3px;
+    justify-content: center;
+}
+
+.clear{
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+    /* border-style: dashed; */
+    border-color: black;
+    margin: 3px;
+    justify-content: center;
+}
+
+.row{
+    display: flex;
+    flex-grow: 1;
+    /* border-style: dashed; */
+    border-color: black;
+    margin: 3px;
+    justify-content: space-evenly;
+}
+
+.btn{
+    display: flex;
+    flex-grow: 1;
+    margin: 3px;
 }
