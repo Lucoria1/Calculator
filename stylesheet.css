@@ -1,0 +1,40 @@
+.outer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-style: solid;
+    border-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+
+.inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: dashed;
+    border-color: black;
+    height: 650px;
+    width: 600px;
+    margin: 3px;
+}
+
+.content{
+    display: flex;
+    flex-grow: 1;
+    border-style: solid;
+    border-color: black;
+    margin: 3px;
+}
+
+.content.btns{
+    flex-grow: 5;
+}
+
+.content.display{
+    flex-grow: 1;
+}
+
+.content.clear{
+    flex-grow: 1;
+}
