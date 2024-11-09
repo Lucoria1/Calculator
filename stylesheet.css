@@ -55,7 +55,6 @@
 .display{
     display: flex;
     flex-direction: column;
-    /* flex-grow: 1; */
     border-style: dashed;
     border-color: black;
     margin: 3px;
@@ -65,7 +64,6 @@
 .clear{
     display: flex;
     flex-direction: column;
-    /* flex-grow: 1; */
     /* border-style: dashed; */
     border-color: black;
     margin: 3px;
@@ -78,6 +76,7 @@
     /* border-style: dashed; */
     border-color: black;
     margin: 3px;
+    gap: 3px;
     justify-content: space-evenly;
 }
 
@@ -85,4 +84,17 @@
     display: flex;
     flex-grow: 1;
     margin: 3px;
+    justify-content: center;
+    line-height: 110px;
+    background-color: white;
+    width: 136px;
+    font-size: 50px;
+}
+
+.btn:hover{
+    background-color: rgb(181, 221, 245);
+}
+
+.btn:active{
+    background-color: rgb(142, 206, 247);
 }
