@@ -55,7 +55,7 @@
 .display{
     display: flex;
     flex-direction: column;
-    border-style: dashed;
+    /* border-style: dashed; */
     border-color: black;
     margin: 3px;
     justify-content: center;
@@ -63,11 +63,13 @@
 
 .clear{
     display: flex;
-    flex-direction: column;
-    /* border-style: dashed; */
-    border-color: black;
-    margin: 3px;
+    flex-direction: row;
     justify-content: center;
+    text-align: center;
+    flex-grow: 1;
+    font-size: large;
+    background-color: white;
+    border-color: white;
 }
 
 .row{
@@ -98,3 +100,9 @@
 .btn:active{
     background-color: rgb(142, 206, 247);
 }
+
+.results{
+    height:30px;
+    line-height: 25px;
+}
+
