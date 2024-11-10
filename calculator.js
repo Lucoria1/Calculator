@@ -21,16 +21,24 @@ Array.from(document.querySelectorAll(".num")).map((event) => {
             numberOne += event.srcElement.className[8]
             display = numberOne;
             document.querySelector(".results").innerHTML = display;
-            console.log(numberOne)}
+            }
     })
 });
 
 Array.from(document.querySelectorAll(".op")).map((event) => {
     event.addEventListener("click", (event) => {
+        if(Operator === ""){
+        numberTwo = "";
         Operator = event.srcElement.className[7]
         displayOp = display + Operator
-        document.querySelector(".results").innerHTML = displayOp
-        console.log(Operator)
+        document.querySelector(".results").innerHTML = displayOp}else if(Operator !== "") {
+            DisplayResult = operate(numberOne, Operator, numberTwo)
+            Operator = event.srcElement.className[7]
+            numberOne = DisplayResult;
+            numberTwo = ""
+            document.querySelector(".results").innerHTML = numberOne + Operator;
+            console.log(numberTwo)
+        }
     })
 });
 
@@ -45,8 +53,14 @@ Array.from(document.querySelectorAll(".num")).map((event) => {
 });
 
 document.querySelector(".calculate").addEventListener("click", () => {
+    if(numberTwo === ""){
+        document.querySelector(".results").innerHTML = ""
+    } else {
     displayResult = operate(numberOne, Operator, numberTwo);
-    document.querySelector(".results").innerHTML = displayResult
+    numberOne = displayResult;
+    display = numberOne;
+    numberTwo = "";
+    document.querySelector(".results").innerHTML = displayResult;}
 })
 
 document.querySelector(".clear").addEventListener("click", () => {
@@ -60,7 +74,7 @@ document.querySelector(".clear").addEventListener("click", () => {
     document.querySelector(".results").innerHTML = display;
 })
 
-function add (a, b){return a + b};
+function add (a, b){return +a + +b};
 
 function subtract(a, b){return a - b};
 
