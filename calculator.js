@@ -31,7 +31,9 @@ Array.from(document.querySelectorAll(".op")).map((event) => {
         numberTwo = "";
         Operator = event.srcElement.className[7]
         displayOp = display + Operator
-        document.querySelector(".results").innerHTML = displayOp}else if(Operator !== "") {
+        document.querySelector(".results").innerHTML = displayOp}else if (numberTwo === "0" && Operator === "/"){
+            document.querySelector(".results").innerHTML = "this dumbass really tried to divide by 0"
+        }else if(Operator !== "") {
             DisplayResult = operate(numberOne, Operator, numberTwo)
             Operator = event.srcElement.className[7]
             numberOne = DisplayResult;
@@ -55,11 +57,14 @@ Array.from(document.querySelectorAll(".num")).map((event) => {
 document.querySelector(".calculate").addEventListener("click", () => {
     if(numberTwo === ""){
         document.querySelector(".results").innerHTML = ""
-    } else {
+    } else if (numberTwo === "0" && Operator === "/"){
+        document.querySelector(".results").innerHTML = "this dumbass really tried to divide by 0"
+    }else{
     displayResult = operate(numberOne, Operator, numberTwo);
     numberOne = displayResult;
     display = numberOne;
     numberTwo = "";
+    Operator = "";
     document.querySelector(".results").innerHTML = displayResult;}
 })
 
